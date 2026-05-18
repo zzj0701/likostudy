@@ -1,0 +1,50 @@
+java集合框架分为两种
+一种是单列集合Collection，一个元素(数据)
+一种是双列集合map.两个元素(键值对)
+
+
+
+
+Collection<E>分为Lise<E>和set<E>
+List<E>(特点 有序的  可重复的 有索引的  )
+分为  ArrayList<E>   和   linkedList<E>
+
+Set<E>(特点 无序的  不重复的 无索引的  )
+分为 HashSet<E>  和  TreeSet<E>
+HashSet<E>  (特点 无序的  不重复的 无索引的  )
+又可以分为   LinkedHashSet<E>
+  LinkedHashSet<E>特点是 有序的 不重复的 无索引的  
+  TreeSet<E> 特点(按照大小默认升序排序 不重复的 无索引的  )
+
+
+
+Arrays.toString(k) 的主要作用是：将数组的内容转换为一个易读的字符串格式。
+Arrays.toString() 拼接出来的字符串有非常固定的格式：
+开头带一个左中括号 [
+元素之间用逗号和空格 ,  分隔
+结尾带一个右中括号 ]
+Arrays.toString() 只适用于一维数组
+直接打印数组会出现地址值
+静态方法
+Arrays.toString() 是数组生命周期的终点站
+
+
+toArray()是 集合（Collection） 特有的方法 。它的核心作用是：把一个“集合”变成一个“数组” 。
+只有集合（List, Set等）可以调用
+实例方法
+
+这三个方法都是 Java 集合框架（特别是 List 体系）中用来往容器里添加数据的核心方法。虽然它们都带有 add，但它们在添加的数量和添加的位置上有着本质的区别。
+
+为了让你彻底分清，我们用最直观的代码和通俗的比喻来逐一拆解：
+
+add(E e)（添加单个元素）   Collection
+addAll(Collection<? extends E> c) （把另一个集合拆开追加到末尾）   Collection
+addAll(int index, Collection<? extends E> c) (在指定位置批量插队）  List
+
+遍历一个集合（特别是像 Set 这种没有索引、不能用传统 for(int i=0;... ) 循环的集合），你就必须请出“迭代器（Iterator）”。
+迭代器  Collection
+Iterator 
+hasNext() 判断队伍里后面还有没有乘客了。如果后面还有人，返回 true；如果后面空空如也（全检完了），返回 false。
+next（）  作用：做两件事。第一，把当前这个乘客（元素）抓取并返回给你；第二，检票员往后移动一格，对准下一个乘客。
+
+
